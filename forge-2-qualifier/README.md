@@ -1,6 +1,6 @@
 # Forge 2 Qualifier - Hermes x OpenClaw Demo
 
-This repo is a qualifier-ready dry run for Forge 2 Edition 1.
+This is my Forge 2 Edition 1 qualifier submission.
 
 It demonstrates:
 
@@ -11,6 +11,43 @@ It demonstrates:
 - Self-written skill: `skills/status-reporter.mjs`.
 - Autonomous run: `npm run autonomous` posts a health check without a new human command.
 - CI quality gate: `.github/workflows/ci.yml`.
+
+## Submission links
+
+- Loom walkthrough: https://www.loom.com/share/b0ac60fd04894c9dbecefc605503045e
+- Evidence PDF: `docs/forge-2-qualifier-screenshots.pdf`
+- Architecture: `docs/architecture.md`
+- Submission note: `docs/submission-note.md`
+
+## Qualifier compliance matrix
+
+| Requirement | Evidence |
+| --- | --- |
+| Coding agent controlled from chat | `channels/commands.md`, Slack `#commands` screenshot in evidence PDF |
+| Agent writes/runs code | `src/contentAudit.mjs`, `scripts/run-demo.mjs`, PowerShell verification screenshot |
+| Result posted back to agent log | `channels/agent-log.md`, Slack `#agent-log` screenshots |
+| Follow-up handled | `topKeywords` in `outputs/content-audit-result.json` and `channels/agent-log.md` |
+| Orchestrator plans before acting | Hermes plan in `channels/agent-log.md` |
+| Persistent memory | `memory/hermes-memory.json` |
+| Self-written skill | `skills/status-reporter.mjs` |
+| Autonomous run | `scripts/autonomous-run.mjs`, `npm run autonomous`, Hermes Cron log |
+| Public GitHub repo | This repository |
+| Quality gate | `tests/run-tests.mjs`, `.github/workflows/ci.yml` |
+
+## Judge quickstart
+
+Run the full qualifier loop:
+
+```bash
+npm run qualifier
+```
+
+The command runs:
+
+1. Hermes-style planning and worker assignment.
+2. OpenClaw-style content-audit worker output.
+3. Tests and health checks.
+4. Autonomous Hermes health-check post.
 
 ## Run locally
 
@@ -61,13 +98,13 @@ Configure Hermes as the product-owner/orchestrator profile:
 
 ## Submission checklist
 
-- Public GitHub repo.
-- Incremental commits, not one giant final commit.
-- `channels/agent-log.md` preserved.
-- Slack screenshots or export showing `#commands` and `#agent-log`.
-- README with architecture and run commands.
-- Architecture diagram in `docs/architecture.md`.
-- Loom walkthrough under 5 minutes.
+- Public GitHub repo: done.
+- Incremental commits: done.
+- `channels/agent-log.md` preserved: done.
+- Slack screenshots showing `#commands` and `#agent-log`: done in `docs/forge-2-qualifier-screenshots.pdf`.
+- README with architecture and run commands: done.
+- Architecture diagram in `docs/architecture.md`: done.
+- Loom walkthrough under 5 minutes: done.
 
 ## Loom walkthrough outline
 
