@@ -1,0 +1,26 @@
+{
+  "wordCount": 27,
+  "tone": "action-oriented",
+  "topKeywords": [
+    {
+      "word": "agent",
+      "count": 1
+    },
+    {
+      "word": "build",
+      "count": 1
+    },
+    {
+      "word": "clear",
+      "count": 1
+    }
+  ],
+  "health": {
+    "passed": true,
+    "checks": [
+      "word-count",
+      "tone-classification",
+      "keyword-extraction"
+    ]
+  }
+}

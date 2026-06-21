@@ -1,0 +1,16 @@
+{
+  "facts": [
+    {
+      "id": "status-format",
+      "value": "Always report status as What I Did / What's Left / What Needs Your Call.",
+      "source": "qualifier-prep",
+      "createdAt": "2026-06-21T09:00:00+05:30"
+    },
+    {
+      "id": "builder-priority",
+      "value": "For the qualifier, prefer a small working chat-ops loop over a broad unfinished architecture.",
+      "source": "qualifier-prep",
+      "createdAt": "2026-06-21T09:02:00+05:30"
+    }
+  ]
+}

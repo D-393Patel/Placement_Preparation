@@ -1,0 +1,16 @@
+{
+  "name": "forge-2-qualifier",
+  "version": "1.0.0",
+  "description": "Forge 2 qualifier demo: Hermes orchestrator plus OpenClaw-style coding worker over auditable chat channels.",
+  "type": "module",
+  "scripts": {
+    "demo": "node scripts/run-demo.mjs",
+    "autonomous": "node scripts/autonomous-run.mjs",
+    "test": "node tests/run-tests.mjs",
+    "qualifier": "npm run demo && npm test && npm run autonomous"
+  },
+  "engines": {
+    "node": ">=22.19.0"
+  },
+  "license": "MIT"
+}
