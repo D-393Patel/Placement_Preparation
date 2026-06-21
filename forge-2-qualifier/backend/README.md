@@ -1,8 +1,29 @@
-# Backend - Laravel API Scaffold
+# Forge Kanban Backend
 
-The official qualifier asks for a Laravel API with SQLite. PHP and Composer were not available on the current Windows machine, so this folder contains the Laravel-style implementation plan and source scaffold needed for the API.
+Real Laravel API for the Forge 2 qualifier Kanban board.
 
-Expected endpoints:
+## Requirements
+
+- PHP 8.2+
+- Composer
+- SQLite
+
+## Run
+
+```bash
+cp .env.example .env
+php artisan key:generate
+php artisan migrate --seed
+php artisan serve
+```
+
+API base URL:
+
+```text
+http://127.0.0.1:8000/api
+```
+
+## Endpoints
 
 | Method | Endpoint | Purpose |
 | --- | --- | --- |
@@ -10,25 +31,8 @@ Expected endpoints:
 | POST | `/api/boards` | create board |
 | GET | `/api/boards/{board}` | board with lists/cards/tags/members |
 | POST | `/api/lists` | create list |
+| PATCH | `/api/lists/{list}` | edit list |
 | POST | `/api/cards` | create card |
 | PATCH | `/api/cards/{card}` | edit title, description, assignee, due date |
 | POST | `/api/cards/{card}/move` | move card between lists |
 | POST | `/api/cards/{card}/tags` | attach a colored tag |
-
-## Intended local run
-
-```bash
-composer create-project laravel/laravel backend
-cd backend
-cp .env.example .env
-php artisan key:generate
-php artisan migrate --seed
-php artisan serve
-```
-
-Use SQLite:
-
-```env
-DB_CONNECTION=sqlite
-DB_DATABASE=database/database.sqlite
-```

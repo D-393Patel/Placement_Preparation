@@ -9,7 +9,7 @@ class BoardController extends Controller
 {
     public function index()
     {
-        return Board::with('lists.cards.tags', 'members')->get();
+        return Board::with(['lists.cards.tags', 'lists.cards.member', 'members'])->get();
     }
 
     public function store(Request $request)
@@ -21,6 +21,6 @@ class BoardController extends Controller
 
     public function show(Board $board)
     {
-        return $board->load('lists.cards.tags', 'members');
+        return $board->load(['lists.cards.tags', 'lists.cards.member', 'members']);
     }
 }

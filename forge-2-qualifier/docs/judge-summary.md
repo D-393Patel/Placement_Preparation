@@ -26,6 +26,9 @@ This project demonstrates the Forge 2 qualifier loop with a Hermes-style orchest
 | `tests/run-tests.mjs` | Quality gate |
 | `docs/architecture.md` | System architecture |
 | `docs/forge-2-qualifier-screenshots.pdf` | Slack and terminal evidence |
+| `backend/` | Real Laravel Kanban API |
+| `frontend/` | Live Kanban frontend |
+| `docs/install-evidence.md` | Installed PHP, Composer, OpenClaw, Hermes evidence |
 | Loom walkthrough | Human-readable demo |
 
 ## Why the scope is small

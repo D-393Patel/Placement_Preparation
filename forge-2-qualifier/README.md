@@ -26,6 +26,7 @@ It demonstrates:
 - Evidence PDF: `docs/forge-2-qualifier-screenshots.pdf`
 - Architecture: `ARCHITECTURE.md`
 - Submission note: `docs/submission-note.md`
+- Install evidence: `docs/install-evidence.md`
 
 ## Qualifier compliance matrix
 
@@ -92,7 +93,22 @@ cd frontend
 start index.html
 ```
 
-The Laravel API scaffold is in `backend/`. PHP and Composer were not available on the current machine, so the API source is included as a scaffold with routes, controllers, and `.env.example`.
+The Laravel API is in `backend/` with models, migrations, seed data, routes, controllers, and feature tests.
+
+Backend verification:
+
+```bash
+cd backend
+php artisan test
+```
+
+On this OneDrive-backed Windows machine, file-backed SQLite returned a disk I/O error, so the local verification used in-memory SQLite:
+
+```powershell
+$env:DB_CONNECTION='sqlite'
+$env:DB_DATABASE=':memory:'
+php artisan test
+```
 
 ## Slack mapping for the live qualifier
 

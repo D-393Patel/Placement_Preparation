@@ -25,4 +25,11 @@ class ListController extends Controller
 
         return $list;
     }
+
+    public function destroy(BoardList $list)
+    {
+        $list->delete();
+
+        return response()->noContent();
+    }
 }
