@@ -14,7 +14,7 @@ It demonstrates:
 - OpenClaw-style coding worker: receives a task from chat, writes/runs code, handles one follow-up.
 - Chat communication layer: local `channels/*.md` files mirror Slack channels for auditability.
 - Persistent memory: `memory/hermes-memory.json`.
-- Self-written skill: `skills/status-reporter.mjs`.
+- Self-written skill: `skills/status-report/SKILL.md` and executable helper `skills/status-reporter.mjs`.
 - Autonomous run: `npm run autonomous` posts a health check without a new human command.
 - CI quality gate: `.github/workflows/ci.yml`.
 - Tiny Kanban board: `frontend/`.
@@ -34,16 +34,18 @@ It demonstrates:
 | --- | --- |
 | Coding agent controlled from chat | `channels/commands.md`, Slack `#commands` screenshot in evidence PDF |
 | Agent writes/runs code | `src/contentAudit.mjs`, `scripts/run-demo.mjs`, PowerShell verification screenshot |
-| Result posted back to agent log | `channels/agent-log.md`, Slack `#agent-log` screenshots |
+| Result posted back to agent log | `agent-log.md`, `channels/agent-log.md`, Slack `#agent-log` screenshots |
 | Follow-up handled | `topKeywords` in `outputs/content-audit-result.json` and `channels/agent-log.md` |
 | Orchestrator plans before acting | Hermes plan in `channels/agent-log.md` |
 | Persistent memory | `memory/hermes-memory.json` |
-| Self-written skill | `skills/status-reporter.mjs` |
+| Self-written skill | `skills/status-report/SKILL.md`, `skills/status-reporter.mjs` |
 | Autonomous run | `scripts/autonomous-run.mjs`, `npm run autonomous`, Hermes Cron log |
 | Public GitHub repo | This repository |
 | Quality gate | `tests/run-tests.mjs`, `.github/workflows/ci.yml` |
 | Tiny Kanban app | `frontend/index.html`, `frontend/app.js`, `backend/` |
 | Live URL | GitHub Pages branch deploy from `gh-pages` |
+| Sanitized configs | `openclaw.json`, `hermes.config.example.yaml`, `.env.example` |
+| Slack evidence folder | `slack-export/README.md` |
 
 ## Judge quickstart
 

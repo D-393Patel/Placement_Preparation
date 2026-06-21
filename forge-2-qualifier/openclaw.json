@@ -1,0 +1,29 @@
+{
+  "profile": "forge-2-qualifier",
+  "channels": {
+    "slack": {
+      "enabled": true,
+      "mode": "socket",
+      "appToken": {
+        "source": "env",
+        "id": "SLACK_APP_TOKEN"
+      },
+      "botToken": {
+        "source": "env",
+        "id": "SLACK_BOT_TOKEN"
+      }
+    }
+  },
+  "workspace": {
+    "root": ".",
+    "workerRole": "OpenClaw coding agent",
+    "defaultChannel": "#agent-coder"
+  },
+  "models": {
+    "execution": {
+      "provider": "ollama",
+      "baseUrl": "http://localhost:11434/v1",
+      "model": "qwen2.5-coder"
+    }
+  }
+}

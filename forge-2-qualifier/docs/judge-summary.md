@@ -18,10 +18,15 @@ This project demonstrates the Forge 2 qualifier loop with a Hermes-style orchest
 
 | Artifact | Purpose |
 | --- | --- |
+| `agent-log.md` | Root-level required agent log pointer |
 | `channels/commands.md` | Chat command transcript |
 | `channels/agent-log.md` | Hermes/OpenClaw log transcript |
 | `memory/hermes-memory.json` | Persistent memory |
-| `skills/status-reporter.mjs` | Self-written skill |
+| `skills/status-report/SKILL.md` | Handbook-format Hermes skill |
+| `skills/status-reporter.mjs` | Executable status-format helper |
+| `openclaw.json` | Sanitized OpenClaw Slack/model config |
+| `hermes.config.example.yaml` | Sanitized Hermes orchestrator config |
+| `.env.example` | Required environment variables without secrets |
 | `outputs/content-audit-result.json` | Worker output |
 | `tests/run-tests.mjs` | Quality gate |
 | `docs/architecture.md` | System architecture |

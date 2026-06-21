@@ -1,0 +1,30 @@
+profile: forge-2-qualifier
+role: orchestrator
+
+model:
+  provider: groq
+  name: openai/gpt-oss-120b
+  note: "Free planning model. Gemini 2.5 Flash is the fallback free provider."
+
+memory:
+  enabled: true
+  source: memory/hermes-memory.json
+
+skills:
+  paths:
+    - skills/status-report/SKILL.md
+
+slack:
+  human_channel: "#sprint-main"
+  worker_channel: "#agent-coder"
+  log_channel: "#agent-log"
+
+rules:
+  - "Post a plan before assigning work."
+  - "Send coding work to OpenClaw through Slack-visible channels."
+  - "Use What I Did / What's Left / What Needs Your Call for status."
+  - "Never commit real API keys or Slack tokens."
+
+autonomy:
+  example_command: "npm run autonomous"
+  proof: channels/agent-log.md
