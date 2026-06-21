@@ -13,4 +13,8 @@ The live Slack workspace should mirror the local channel names:
 - `#commands`
 - `#agent-log`
 
-Before submitting, replace this note with the public GitHub URL, Slack evidence links or screenshots, and Loom link.
+## Links
+
+- GitHub repo: https://github.com/D-393Patel/forge-2-hermes-openclaw-qualifier
+- Loom walkthrough: https://www.loom.com/share/b0ac60fd04894c9dbecefc605503045e
+- Evidence PDF: `docs/forge-2-qualifier-screenshots.pdf`
