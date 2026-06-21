@@ -2,6 +2,12 @@
 
 This is my Forge 2 Edition 1 qualifier submission.
 
+Live frontend URL after GitHub Pages deploys:
+
+```text
+https://d-393patel.github.io/forge-2-hermes-openclaw-qualifier/
+```
+
 It demonstrates:
 
 - Hermes-style orchestrator: plans first, recalls memory, assigns work, reports status.
@@ -11,12 +17,14 @@ It demonstrates:
 - Self-written skill: `skills/status-reporter.mjs`.
 - Autonomous run: `npm run autonomous` posts a health check without a new human command.
 - CI quality gate: `.github/workflows/ci.yml`.
+- Tiny Kanban board: `frontend/`.
+- Laravel API scaffold: `backend/`.
 
 ## Submission links
 
 - Loom walkthrough: https://www.loom.com/share/b0ac60fd04894c9dbecefc605503045e
 - Evidence PDF: `docs/forge-2-qualifier-screenshots.pdf`
-- Architecture: `docs/architecture.md`
+- Architecture: `ARCHITECTURE.md`
 - Submission note: `docs/submission-note.md`
 
 ## Qualifier compliance matrix
@@ -33,6 +41,8 @@ It demonstrates:
 | Autonomous run | `scripts/autonomous-run.mjs`, `npm run autonomous`, Hermes Cron log |
 | Public GitHub repo | This repository |
 | Quality gate | `tests/run-tests.mjs`, `.github/workflows/ci.yml` |
+| Tiny Kanban app | `frontend/index.html`, `frontend/app.js`, `backend/` |
+| Live URL | GitHub Pages workflow in `.github/workflows/pages.yml` |
 
 ## Judge quickstart
 
@@ -60,6 +70,29 @@ Expected result:
 - `outputs/content-audit-result.json` is created.
 - `channels/agent-log.md` contains the Hermes plan, OpenClaw worker update, follow-up handling, structured status report, and autonomous health check.
 - `npm test` passes.
+
+## Kanban app
+
+The official qualifier build is a tiny Trello-style Kanban board.
+
+Included frontend features:
+
+- Boards -> lists -> cards.
+- Move cards between lists.
+- Edit card title.
+- Card description.
+- Colored tags.
+- Member assignment.
+- Due date and overdue flag.
+
+Open locally:
+
+```bash
+cd frontend
+start index.html
+```
+
+The Laravel API scaffold is in `backend/`. PHP and Composer were not available on the current machine, so the API source is included as a scaffold with routes, controllers, and `.env.example`.
 
 ## Slack mapping for the live qualifier
 
@@ -103,7 +136,7 @@ Configure Hermes as the product-owner/orchestrator profile:
 - `channels/agent-log.md` preserved: done.
 - Slack screenshots showing `#commands` and `#agent-log`: done in `docs/forge-2-qualifier-screenshots.pdf`.
 - README with architecture and run commands: done.
-- Architecture diagram in `docs/architecture.md`: done.
+- Architecture diagram in `ARCHITECTURE.md`: done.
 - Loom walkthrough under 5 minutes: done.
 
 ## Loom walkthrough outline

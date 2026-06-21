@@ -1,0 +1,243 @@
+:root {
+  color-scheme: light;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: #f6f7f9;
+  color: #17202a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 280px 1fr;
+}
+
+.sidebar {
+  background: #102026;
+  color: #f7fafc;
+  padding: 24px;
+}
+
+.sidebar h1 {
+  font-size: 24px;
+  margin: 0 0 8px;
+}
+
+.sidebar p {
+  color: #c6d3d8;
+  line-height: 1.5;
+  margin: 0 0 20px;
+}
+
+.member-list {
+  display: grid;
+  gap: 10px;
+}
+
+.member {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 8px;
+}
+
+.avatar {
+  display: grid;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #7dd3fc;
+  color: #082f49;
+  font-weight: 700;
+}
+
+.workspace {
+  padding: 24px;
+  overflow: auto;
+}
+
+.toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 18px;
+}
+
+.toolbar h2 {
+  margin: 0;
+  font-size: 28px;
+}
+
+.toolbar-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.control {
+  border: 1px solid #d7dde2;
+  border-radius: 8px;
+  background: white;
+  padding: 10px 12px;
+}
+
+.primary-button {
+  border: 0;
+  border-radius: 8px;
+  background: #116149;
+  color: white;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(260px, 1fr));
+  gap: 16px;
+  align-items: start;
+}
+
+.list {
+  background: #e9eef2;
+  border-radius: 8px;
+  padding: 12px;
+  min-height: 420px;
+}
+
+.list-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.list-header h3 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.count {
+  background: #ffffff;
+  border-radius: 999px;
+  padding: 3px 8px;
+  font-size: 12px;
+  color: #4b5563;
+}
+
+.cards {
+  display: grid;
+  gap: 10px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #dce3e8;
+  border-radius: 8px;
+  padding: 12px;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.08);
+}
+
+.card.overdue {
+  border-color: #ef4444;
+}
+
+.card h4 {
+  margin: 0 0 6px;
+  font-size: 15px;
+}
+
+.card p {
+  margin: 0 0 10px;
+  color: #52616b;
+  line-height: 1.4;
+  font-size: 13px;
+}
+
+.meta-row,
+.card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-items: center;
+}
+
+.tag {
+  border-radius: 999px;
+  padding: 4px 8px;
+  color: #111827;
+  font-size: 12px;
+}
+
+.assignee,
+.due-date {
+  color: #4b5563;
+  font-size: 12px;
+}
+
+.card-actions {
+  margin-top: 10px;
+}
+
+.card-actions button {
+  border: 1px solid #d7dde2;
+  border-radius: 6px;
+  background: #f8fafc;
+  cursor: pointer;
+  padding: 6px 8px;
+  font-size: 12px;
+}
+
+.editor {
+  margin-top: 16px;
+  background: white;
+  border: 1px solid #dce3e8;
+  border-radius: 8px;
+  padding: 14px;
+  display: grid;
+  gap: 10px;
+  max-width: 720px;
+}
+
+.editor-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.editor textarea {
+  min-height: 74px;
+  resize: vertical;
+}
+
+@media (max-width: 900px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .board {
+    grid-template-columns: 1fr;
+  }
+
+  .editor-row,
+  .toolbar {
+    grid-template-columns: 1fr;
+    display: grid;
+  }
+}
