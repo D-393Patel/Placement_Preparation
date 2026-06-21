@@ -2,7 +2,7 @@
 
 This is my Forge 2 Edition 1 qualifier submission.
 
-Live frontend URL after GitHub Pages deploys:
+Live frontend URL:
 
 ```text
 https://d-393patel.github.io/forge-2-hermes-openclaw-qualifier/
@@ -43,7 +43,7 @@ It demonstrates:
 | Public GitHub repo | This repository |
 | Quality gate | `tests/run-tests.mjs`, `.github/workflows/ci.yml` |
 | Tiny Kanban app | `frontend/index.html`, `frontend/app.js`, `backend/` |
-| Live URL | GitHub Pages workflow in `.github/workflows/pages.yml` |
+| Live URL | GitHub Pages branch deploy from `gh-pages` |
 
 ## Judge quickstart
 
